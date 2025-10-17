@@ -1,3 +1,11 @@
+/*
+This program is written for an ESP 32 which can be installed with ease into any electricity meter to measure the number of flashes made and calculate the usage over time.
+The data is stored in flashes.log on the local IP and can then be further accessed.
+From the file stored on the file, which includes the length of each impulse it is very easy to track any garbage readings since all of the flashes from the meter are more or less the same time duration with very small margin of error.
+You'll notice that the loop is empty and that everything is done through the ReadADC ticker. this was just a convenient choice for CPU usage optimization.
+*/
+
+
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 #include <FS.h>
